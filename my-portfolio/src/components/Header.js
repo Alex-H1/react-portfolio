@@ -1,124 +1,49 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
+import React from 'react';
 
-const pages = ['About Me', 'Portfolio', 'Contact', 'Resume'];
-
-const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-
-
+function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Alex Hernandez
-          </Typography>
 
-          {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box> */}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            Alex Hernandez
-          </Typography>
-          {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box> */}
-        </Toolbar>
-      </Container>
-    </AppBar>
+    <header className="bg-white md:sticky top-0 z-10">
+    <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+
+      <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 	flex flex-wrap items-center text-base justify-center">
+        <a 
+          href="#About-Me" 
+          className={currentPage === 'Home' ? ' inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('Home')}
+        >
+          About Me
+        </a>
+        <a 
+          href="#Portfolio" 
+          className={currentPage === 'About' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('About')}
+        >
+          Portfolio
+        </a>
+        <a 
+          href="#Contact" 
+          className={currentPage === 'Blog' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('Blog')}
+        >
+          Contact
+        </a>
+        <a 
+          href="#Resume" 
+          className={currentPage === 'Contact' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('Contact')}
+        >
+          Resume
+        </a>
+      </nav>
+      <h1
+        className="inline-flex items-center border-0 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0"
+      >
+        Alex Hernandez
+      </h1>
+    </div>
+  </header>
   );
-};
-export default ResponsiveAppBar;
+}
+
+export default NavTabs;
