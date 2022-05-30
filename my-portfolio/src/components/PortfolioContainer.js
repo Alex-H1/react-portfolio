@@ -4,6 +4,7 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import ResponsiveAppBar from './Header';
+import LabelBottomNavigation from './Footer'
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -27,6 +28,8 @@ export default function PortfolioContainer() {
     <div>
       <ResponsiveAppBar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
+      <LabelBottomNavigation/>
     </div>
+
   );
 }
