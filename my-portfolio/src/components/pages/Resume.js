@@ -19,7 +19,6 @@ export default function Resume() {
 
   return (
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
-
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Demo>
