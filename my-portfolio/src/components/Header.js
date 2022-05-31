@@ -23,15 +23,15 @@ function NavTabs({ currentPage, handlePageChange }) {
         </a>
         <a 
           href="#Contact" 
-          className={currentPage === 'Blog' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
-          onClick={() => handlePageChange('Blog')}
+          className={currentPage === 'Contact' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('Contact')}
         >
           Contact
         </a>
         <a 
           href="#Resume" 
-          className={currentPage === 'Contact' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
-          onClick={() => handlePageChange('Contact')}
+          className={currentPage === 'Resume' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('Resume')}
         >
           Resume
         </a>
