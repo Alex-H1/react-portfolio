@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
 
 export default function Home() {
   return (
@@ -17,7 +16,7 @@ export default function Home() {
         }}
       >
           <div>
-            <img class="object-contain h-48 w-96 ..." src="/myimage.jpg" alt="Alex Hernandez" />
+            <img className="object-contain h-48 w-96" src={process.env.PUBLIC_URL+"/mypicture.JPG"} alt="Alex Hernandez" />
           </div>        
       </Box>
       <br/>

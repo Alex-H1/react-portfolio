@@ -18,7 +18,7 @@ export default function About() {
               <CardMedia
                 component="img"
                 height="140"
-                image="/JATE.jpg"
+                image={process.env.PUBLIC_URL+"/JATE.jpg"}
                 alt="Just Another Text Editor"
               />
               <CardContent>
@@ -41,7 +41,7 @@ export default function About() {
               <CardMedia
                 component="img"
                 height="140"
-                image="/Social.jpg"
+                image={process.env.PUBLIC_URL+"/social.jpg"}
                 alt="Social media API"
               />
               <CardContent>
@@ -62,7 +62,7 @@ export default function About() {
               <CardMedia
                 component="img"
                 height="140"
-                image="/AniFan.jpg"
+                image={process.env.PUBLIC_URL+"/AniFan.jpg"}
                 alt="AniFan"
               />
               <CardContent>
@@ -84,8 +84,8 @@ export default function About() {
               <CardMedia
                 component="img"
                 height="140"
-                image="/ecommerce.jpg"
-                alt="green iguana"
+                image={process.env.PUBLIC_URL+"/ecommerce.jpg"}
+                alt="ecommerce api"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -105,7 +105,7 @@ export default function About() {
               <CardMedia
                 component="img"
                 height="140"
-                image="/NoteTaker.jpg"
+                image={process.env.PUBLIC_URL+"/NoteTaker.jpg"}
                 alt="NoteTaker"
               />
               <CardContent>
@@ -127,8 +127,8 @@ export default function About() {
               <CardMedia
                 component="img"
                 height="140"
-                image="/celebrity.jpg"
-                alt="green iguana"
+                image={process.env.PUBLIC_URL+"/celebrity.jpg"}
+                alt="celebrity matchmaker quiz"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
