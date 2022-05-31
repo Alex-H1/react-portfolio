@@ -9,15 +9,15 @@ function NavTabs({ currentPage, handlePageChange }) {
       <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 	flex flex-wrap items-center text-base justify-center">
         <a 
           href="#About-Me" 
-          className={currentPage === 'Home' ? ' inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
-          onClick={() => handlePageChange('Home')}
+          className={currentPage === 'AboutMe' ? ' inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('AboutMe')}
         >
           About Me
         </a>
         <a 
           href="#Portfolio" 
-          className={currentPage === 'About' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
-          onClick={() => handlePageChange('About')}
+          className={currentPage === 'Portfolio' ? 'inline-block border-l border-t border-r rounded-t py-2 px-4  mr-5' : 'nav-link mr-5'}
+          onClick={() => handlePageChange('Portfolio')}
         >
           Portfolio
         </a>
