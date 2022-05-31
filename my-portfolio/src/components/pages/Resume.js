@@ -1,22 +1,129 @@
-import React from 'react';
+import * as React from 'react';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+
+
+
+const Demo = styled('div')(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper,
+}));
 
 export default function Resume() {
+  const [dense, setDense] = React.useState(false);
+
   return (
-    <div>
-      <h1>Resume</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
-    </div>
+    <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
+
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Demo>
+            <List dense={dense}>
+                <ListItem disablePadding>
+                  <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+                     Front-end
+                  </Typography>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="HTML"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="CSS"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="JavaScript"
+                  />
+                </ListItem>
+                <ListItem disablePadding> 
+                  <ListItemText
+                    primary="JQuery"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="React"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="Responsive design"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="Bootstrap"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="Bulma.io"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="Tailwindcss"
+                  />
+                </ListItem>
+            </List>
+          </Demo>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Demo>
+            <List dense={dense}>
+                <ListItem disablePadding>
+                  <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
+                     Back-end
+                  </Typography>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="APIs"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="Node"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="Express"
+                  />
+                </ListItem>
+                <ListItem disablePadding> 
+                  <ListItemText
+                    primary="MySQL, Sequelize"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="MongoDB, Mongoose"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="REST"
+                  />
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemText
+                    primary="GraphQl"
+                  />
+                </ListItem>
+            </List>
+          </Demo>
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
