@@ -11,7 +11,7 @@ import CardActions from '@mui/material/CardActions';
 
 export default function About() {
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ width: '100%',  }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid item xs={6}>
           <Card sx={{ maxWidth: 345 }}>

@@ -3,7 +3,7 @@ import React from 'react';
 function NavTabs({ currentPage, handlePageChange }) {
   return (
 
-    <header className="bg-white md:sticky top-0 z-10">
+    <header className="bg-neutral-600 md:sticky top-0 z-10">
     <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
 
       <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 	flex flex-wrap items-center text-base justify-center">

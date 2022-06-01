@@ -22,6 +22,7 @@ export default function Contact({classes}) {
       component="form"
       sx={{
         '& .MuiTextField-root': { m: 1, width: '25ch' },
+        height: '100%'
       }}
       noValidate
       autoComplete="off"
@@ -52,8 +53,23 @@ export default function Contact({classes}) {
           defaultValue="Message"
         />
       </div>
-      <Button variant="outlined">Submit</Button>
-
+      <Button variant="contained">Submit</Button>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
     </Box>
   );
 }

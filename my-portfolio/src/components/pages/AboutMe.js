@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 
 export default function Home() {
   return (
-    <div>
+    <div >
       <h1>About me</h1>
       <Box
         sx={{
@@ -24,6 +24,23 @@ export default function Home() {
       <p>
       My name is Alexander Hernandez and I am currently a student at U.C Berkely Extension Coding Bootcamp. My background includes CNC Machining and Painting
       </p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
     </div>
 
   

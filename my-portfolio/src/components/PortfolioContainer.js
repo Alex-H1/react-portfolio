@@ -7,7 +7,7 @@ import ResponsiveAppBar from './Header';
 import LabelBottomNavigation from './Footer'
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('Home');
+  const [currentPage, setCurrentPage] = useState('AboutMe');
 
   const renderPage = () => {
     if (currentPage === 'AboutMe') {
@@ -27,8 +27,10 @@ export default function PortfolioContainer() {
   return (
     <div>
       <ResponsiveAppBar currentPage={currentPage} handlePageChange={handlePageChange} />
+      <div className='bg-sky-600'>
       {renderPage()}
-      <LabelBottomNavigation/>
+      </div>
+      <LabelBottomNavigation />
     </div>
 
   );

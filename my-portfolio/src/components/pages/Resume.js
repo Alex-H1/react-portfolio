@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -11,21 +10,18 @@ import Button from '@mui/material/Button';
 
 
 
-const Demo = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.background.paper,
-}));
-
 export default function Resume() {
   const [dense, setDense] = React.useState(false);
 
   return (
-    <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
+    <div >
+    <Box sx={{ flexGrow: 1, maxWidth: 752,}} >
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
-          <Demo>
-          <Button variant="outlined">My Resume</Button>
+          {/* <Demo  > */}
+          <Button  sx={{ color: 'text.primary' }}target='_blank' href={process.env.PUBLIC_URL+"/myresume.pdf"}  variant="outlined">My Resume</Button>
 
-            <List dense={dense}>
+            <List dense={dense} >
                 <ListItem disablePadding>
                   <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
                      Front-end
@@ -77,10 +73,8 @@ export default function Resume() {
                   />
                 </ListItem>
             </List>
-          </Demo>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Demo>
             <List dense={dense}>
                 <ListItem disablePadding>
                   <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
@@ -123,9 +117,19 @@ export default function Resume() {
                   />
                 </ListItem>
             </List>
-          </Demo>
         </Grid>
       </Grid>
     </Box>
+    <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
+
+    </div>
   );
 }
