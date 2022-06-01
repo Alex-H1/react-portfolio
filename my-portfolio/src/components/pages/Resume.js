@@ -6,6 +6,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
 
 
@@ -22,6 +23,8 @@ export default function Resume() {
       <Grid container spacing={2}>
         <Grid item xs={12} md={6}>
           <Demo>
+          <Button variant="outlined">My Resume</Button>
+
             <List dense={dense}>
                 <ListItem disablePadding>
                   <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div">
